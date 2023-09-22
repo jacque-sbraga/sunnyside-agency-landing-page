@@ -12,7 +12,136 @@
     --white: rgb(255, 255, 255);
 
     font-size: 0.625rem;
+    font-family: 'Barlow', sans-serif;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+html, body {
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hero-section {
+    height: 80rem;
+    background: url(./images/desktop/image-header.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 3rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    height: 24px;
+}
+
+.menu__list {
+    display: flex;
+    gap: 5rem;
+    font-size: 1.6rem;
+    color: var(--white);
+    align-items: center;
+}
+
+.menu__list a {
+    display: block;
+}
+
+.menu__list--btn {
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    color: var(--n-very-dark-desaturated-blue);
+    background-color: var(--white);
+    padding: 1.6rem 3rem;
+    border-radius: 30px;
+    font-size: 1.4rem;
+}
+
+.menu--hamburger {
+    display: none;
+}
+
+.hero-section__title {
+    font-size: 4rem;
+    font-family: 'Fraunces', serif;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    margin-bottom: 10rem;
+}
+
+.hero-section__arrow-down {
+    cursor: pointer;
+}
+
+
+/* utils */
+.center {
+    padding: 3rem;
+    text-align: center;
+    margin-top: 10rem ;
+}
+
+.attribution { font-size: 14px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 1024px){
+    .hero-section {
+        height: 56rem;
+    }
+
+}
+
+@media (max-width: 700px){
+    .menu__list {
+        display: none;
+    }
+
+    .menu--hamburger{
+        display: block;
+    }
+
+    .hero-section__title {
+        margin-bottom: 9rem;
+    }
+
+    .center{
+        margin-top: 9rem;
+        padding: 1.6rem;
+    }
+}
+
+@media (max-width: 495px){
+    .hero-section {
+        background: url(./images/mobile/image-header.jpg) no-repeat;
+        background-position: center 100%;
+        background-size: cover;
+    }
+    .hero-section__title {
+        letter-spacing: 4px;
+        margin-bottom: 4rem
+    }
+
+    .center{
+        margin-top: 8rem;
+        
+    }
+
+}
